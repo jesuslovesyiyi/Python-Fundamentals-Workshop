@@ -1,2 +1,2 @@
-# Python-Foundamentals-Workshop
+# Python-Fundamentals-Workshop
 This is 
