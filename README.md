@@ -47,3 +47,5 @@ Now that you have all the required software and materials, you need to run the c
 4. Open the `01_Jupyter_and_Python.ipynb` to begin.
 
 5. Press Shift + Enter (or Ctrl + Enter) to run a cell.
+
+The materials of this workshop were first developed by the Berkeley Dlab. I made modifications to the original code to suite the purpose of this class.
