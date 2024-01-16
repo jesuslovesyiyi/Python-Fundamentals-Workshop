@@ -33,3 +33,17 @@ Anaconda is software that allows you to run Python and Jupyter notebooks on your
 * Extract this file to a folder on your computer where you can easily access it (I recommend Desktop).
 
 3. Optional: if you're familiar with `git`, you can instead clone this repository by opening a terminal and entering `git clone https://github.com/jesuslovesyiyi/Python-Fundamentals-Workshop.git`.
+
+## Run the code
+
+Now that you have all the required software and materials, you need to run the code:
+
+1. Open the Anaconda Navigator application. You should see the green snake logo appear on your screen. Note that this can take a few minutes to load up the first time.
+
+2. Click the "Launch" button under "Jupyter Lab" and navigate through your file system to the `Python-Fundamentals-Workshop` folder you downloaded above.
+
+3. Navigate to lessons -> Fundamentals-I
+
+4. Open the `01_Jupyter_and_Python.ipynb` to begin.
+
+5. Press Shift + Enter (or Ctrl + Enter) to run a cell.
