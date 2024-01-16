@@ -42,7 +42,7 @@ Now that you have all the required software and materials, you need to run the c
 
 2. Click the "Launch" button under "Jupyter Lab" and navigate through your file system to the `Python-Fundamentals-Workshop` folder you downloaded above.
 
-3. Navigate to lessons -> Fundamentals-I
+3. Navigate to lessons
 
 4. Open the `01_Jupyter_and_Python.ipynb` to begin.
 
