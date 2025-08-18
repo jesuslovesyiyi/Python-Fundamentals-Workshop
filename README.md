@@ -4,6 +4,7 @@
 
 This interactive workshop is your complete introduction to programming Python for people with little or no previous programming experience, with a focus on data science applications. It covers the basics of Python and Jupyter, variables and data types, and a gentle introduction to data analysis in Pandas.
 
+The materials of this workshop were first developed by the Berkeley Dlab. I made modifications to the original code to suit the purpose of this course.
 ## Learning Objectives
 
 After completing Python Fundamentals, you will be able to:
@@ -57,11 +58,14 @@ If the command displays the version of Conda, you have successfully installed Mi
 
 ## Download the materials in this repository:
 
-* Click the green "Code" button in the top right of the repository information.
-* Click "Download Zip".
+* Click the green "**Code**" button in the top right of the repository information.
+* Click "**Download Zip**".
 * Extract this file to a folder on your computer where you can easily access it (I recommend Desktop).
 
-Optional: if you're familiar with `git`, you can instead clone this repository by opening a terminal and entering `git clone https://github.com/jesuslovesyiyi/Python-Fundamentals-Workshop.git`.
+Optional: if you're familiar with `git`, you can instead clone this repository by opening a terminal and entering
+```
+git clone https://github.com/jesuslovesyiyi/Python-Fundamentals-Workshop.git
+```
 
 ## Run the code
 
@@ -71,13 +75,12 @@ Now that you have all the required software and materials, you need to run the c
 
 2. Click the "Launch" button under "Jupyter Lab" and navigate through your file system to the `Python-Fundamentals-Workshop` folder you downloaded above.
 
-3. Navigate to lessons
+3. Navigate to **lessons**
 
 4. Open the `01_Jupyter_and_Python.ipynb` to begin.
 
-5. Press Shift + Enter (or Ctrl + Enter) to run a cell.
+5. Press `Shift + Enter` (or `Ctrl + Enter`) to run a cell.
 
-The materials of this workshop were first developed by the Berkeley Dlab. I made modifications to the original code to suit the purpose of this course.
 
 ## Virtual Environments
 To create a new virtual environment, follow these steps:
