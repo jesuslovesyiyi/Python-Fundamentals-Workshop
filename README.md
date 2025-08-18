@@ -94,17 +94,29 @@ Once you have created a virtual environment, you need to activate it to start us
 1. Open a terminal or command prompt.
 2. Activate the environment using the following command:
 
-For Windows: `conda activate myenv`
+For Windows:
+```
+conda activate myenv
+```
 
-For macOS and Linux: `source activate myenv`
+For macOS and Linux:
+```
+source activate myenv
+```
 
 The name `myenv` should match the name of the environment you created in the previous step.
 
 To deactivate the virtual environment and return to the global Python environment, use the following command:
 
-For Windows: `conda deactivate`
+For Windows:
+```
+conda deactivate
+```
 
-For macOS and Linux: `source deactivate`
+For macOS and Linux:
+```
+source deactivate
+```
 
 With the virtual environment activated, you can now install Python packages specific to your project. Use the conda install or pip install command to install packages, just like you would in a regular Python environment. For example:
 ```
