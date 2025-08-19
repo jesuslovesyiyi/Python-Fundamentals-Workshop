@@ -128,7 +128,16 @@ conda install numpy
 ```
 pip install pandas
 ```
+To ensure stability and avoid conflicts between math libraries (like MKL and OpenBLAS), it's best to install core scientific packages using a single package manager. We recommend using Conda for packages like NumPy, Pandas, SciPy, and Matplotlib.
+
+For this workshop, **install the necessary packages** by running the following command:
+
+```
+conda install numpy pandas matplotlib
+```
+
 To add a virtual environment to Jupyter Notebook you will need to first install ipykernel which provides the IPython kernel for Jupyter:
+
 ```
 pip install ipykernel
 ```
@@ -144,8 +153,24 @@ Visual Studio Code (VS Code) is a popular code editor that provides excellent su
 To get started with VS Code please check out their official website: https://code.visualstudio.com/docs/getstarted/getting-started.
 
 To integrate Anaconda and Miniconda with VS Code, follow these steps:
-1. Install the “Python” extension within VS Code. This extension provides features such as syntax highlighting, code linting, and debugging support for Python.
-2. Open VS Code and navigate to the settings by clicking on “File” > “Preferences” > “Settings”. Alternatively, you can use the keyboard shortcut `Ctrl + `, (`Cmd + `, on macOS).
-3. In the settings, search for “Python: Conda Path” and set the path to the Conda executable. By default, it should be located in the Miniconda installation directory.
-4. Search for “Python: Default Interpreter Path” and select the interpreter associated with the virtual environment you created.
-5. Now, whenever you open a Python file in VS Code, it will automatically detect and use the Python interpreter from the specified virtual environment.
+1. Install the “Python” extension within VS Code.
+
+- Go to the **Extensions** view by clicking on the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X`.
+
+- In the search bar, type `Python`.
+
+- Select the extension published by Microsoft and click Install.
+
+2. Select the Conda environment.
+
+- Open your project folder in VS Code.
+
+- Open the Command Palette by pressing `Ctrl+Shift+P`.
+
+- Type `Python: Select Interpreter` and press Enter.
+
+- A list of available Python interpreters will be displayed, including those from your Conda environments. Select the Conda environment you wish to use (e.g., `'my-env': conda`).
+
+You have now successfully configured VS Code to use your Conda environment.
+
+For other settings, please refer to https://code.visualstudio.com/docs/languages/python#_configuration
