@@ -174,3 +174,43 @@ To integrate Anaconda and Miniconda with VS Code, follow these steps:
 You have now successfully configured VS Code to use your Conda environment.
 
 For other settings, please refer to https://code.visualstudio.com/docs/languages/python#_configuration
+
+
+
+# Python-Fundamentals-Workshop in Colab
+
+## Download the materials in this repository:
+
+* Click the green "**Code**" button in the top right of the repository information.
+* Click "**Download Zip**".
+* Extract this file to a **folder** on your computer where you can easily access it.
+
+## Upload the folder into Google Drive
+
+- Upload the **folder** into your **Google Drive** (persistent, recommended).
+- In your Google Drive, create a folder named `repos`.
+- Place the entire repository folder inside it, so that the path looks like:
+
+![](/img/MyDrive_repos.png)
+
+- The folder structure in your Drive should match the example shown in the figure. Please make sure your Drive looks the same as the screenshot, otherwise Colab may not find the files correctly.
+
+## Locate the repository in Colab
+
+- In Google Drive, double-click to open the **Python-Fundamentals-Workshop** folder, then open the **lessons** folder, and finally open **1_Jupyter_and_Python.ipynb**.
+
+- At the top of the notebook, run the following code (Colab may ask you to grant Drive access—click **Connect to Google Drive** and continue):
+
+```
+from google.colab import drive
+drive.mount('/content/drive')
+%cd /content/drive/MyDrive/repos/Python-Fundamentals-Workshop/lessons
+!ls
+```
+
+- You can now run all the code in Colab (the Colab environment already includes all the packages required for this workshop).
+- The figure below shows the expected output once the setup is successful:
+
+![](/img/drive_mount.png)
+
+- For the other two `.ipynb` files, follow the same steps—you also need to run the code at the top of the notebook to ensure access to the required datasets in the repository.
