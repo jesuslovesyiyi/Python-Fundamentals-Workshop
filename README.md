@@ -214,3 +214,9 @@ drive.mount('/content/drive')
 ![](/img/drive_mount.png)
 
 - For the other two `.ipynb` files, follow the same steps—you also need to run the code at the top of the notebook to ensure access to the required datasets in the repository.
+
+
+
+## Alternative option: Direct upload to Colab
+
+As an alternative, you can directly upload individual notebooks, and any required data files to Colab.
