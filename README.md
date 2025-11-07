@@ -147,6 +147,10 @@ python -m ipykernel install --user --name=myenv
 ```
 Again, the name `myenv` should match the name of the environment you created before.
 
+If you would like to delete/remove the virtual environment that you created before:
+```
+conda remove -n myenv --all
+```
 ## VS Code
 Visual Studio Code (VS Code) is a popular code editor that provides excellent support for Python development. To download and install VS Code: https://code.visualstudio.com/download.
 
