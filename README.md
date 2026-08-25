@@ -21,206 +21,142 @@ After completing Python Fundamentals, you will be able to:
 2. **Part 2: Data Types and Structures**
 3. **Part 3: Introduction to Pandas**
 
+
+
+Before starting the workshop, please set up **Anaconda**, **VS Code**, and a Conda environment for running Jupyter Notebooks.
+
+> **Please carefully read the official documentation linked below.** Most of the information you need for installation, environment setup, and troubleshooting is already provided there. The steps here are only a short guide to the setup we will use in this workshop.
+
 ## Installation Instructions
-**Option A: Install Anaconda**
 
-Anaconda is software that allows you to run Python and Jupyter notebooks on your computer. Installing Anaconda is the easiest way to make sure you have all the necessary software to run the materials for this workshop.
+### 1. Install Anaconda
 
-<u>Preliminaries</u>
+Download and install **Anaconda Distribution** for your operating system:
 
-1. Read the Anaconda QuickStart guide (https://docs.continuum.io/anaconda/install).
+https://www.anaconda.com/docs/getting-started/installation
 
-2. Read the Jupyter Notebook overview: (http://jupyter-notebook.readthedocs.io/en/latest/notebook.html).
+After installation, open **Anaconda Prompt** on Windows or **Terminal** on macOS/Linux and check that Conda works:
 
-3. If you are not already comfortable with the command prompt (windows) or terminal (Mac), please read (http://dosprompt.info/). to familiarize yourself with the basic commands (such as changing directories and listing the contents of a directory) discussed in these links so that you can use the command prompt/terminal to access Python.
-
-<u>Download and install Anaconda</u>
-
-1. [Download and install Anaconda (Python 3.12 distribution)](https://www.anaconda.com/products/individual). Click "Download" and then click 64-bit "Graphical Installer" for your current operating system.
-2. Make sure you download the correct installer for your operating system (Windows, Mac, Linux, etc) and architecture (32 or 64-bit). If you don't know if your operating system is 32 or 64-bit, Google will show you how to check it.  And make sure you download the installer for Python 3.12, not 2.7.
-3. Run the Anaconda installer.
-4. In the Anaconda installer dialog, choose to install for all users, set the destination folder to c:\anaconda (or the equivalent if you're on a Mac), and make sure both tick boxes are ticked for "add anaconda to the system path" and "register anaconda as the system python"
-
-**Option B: Install Miniconda**
-
-Miniconda is a minimal version of the Anaconda Python distribution, which includes only the necessary components required to run Python and manage packages. It provides a lightweight, command-line tool that simplifies the installation and management of software dependencies, making it an excellent choice for developers who prefer a more streamlined approach.
-
-1. Visit the Miniconda website (https://docs.conda.io/en/latest/miniconda.htmlLinks to an external site.).
-2. Choose the appropriate installer for your operating system (Windows, macOS, or Linux).
-3. Download the installer and run it.
-4. Follow the on-screen instructions to complete the installation.
-
-Once the installation is complete, you can open a terminal or command prompt to verify that Miniconda has been installed correctly by running the following command:
 ```
 conda --version
 ```
-If the command displays the version of Conda, you have successfully installed Miniconda.
 
-## Download the materials in this repository:
+### 2. Create a Conda environment and install the required packages
 
-* Click the green "**Code**" button in the top right of the repository information.
-* Click "**Download Zip**".
-* Extract this file to a folder on your computer where you can easily access it (I recommend Desktop).
+Create a Conda environment for the workshop and install the required packages:
 
-Optional: if you're familiar with `git`, you can instead clone this repository by opening a terminal and entering
+```
+conda create -n python-fundamentals python=3.12 jupyter ipykernel numpy pandas matplotlib
+```
+
+When prompted, type `y` and press **Enter** to continue.
+
+Activate the environment:
+
+```
+conda activate python-fundamentals
+```
+
+We use `python-fundamentals` as the environment name in this guide, but you may choose a different name. If you do, replace `python-fundamentals` with your chosen environment name in the commands below.
+
+For more information about creating, activating, and managing Conda environments, please review:
+
+https://www.anaconda.com/docs/getting-started/working-with-conda/environments
+
+Finally, register the Conda environment as a Jupyter kernel:
+
+```
+python -m ipykernel install --user --name=python-fundamentals --display-name "Python (python-fundamentals)"
+```
+
+This allows you to select the environment when running Jupyter Notebooks. If you chose a different environment name, update both `--name` and `--display-name` accordingly.
+
+### 3. Download the materials
+
+First, download the workshop materials from this repository.
+
+1. Click the green **Code** button near the top of the repository.
+2. Click **Download ZIP**.
+3. Extract the ZIP file to a folder on your computer that you can easily access.
+
+If you are familiar with Git, you may instead clone the repository:
+
 ```
 git clone https://github.com/jesuslovesyiyi/Python-Fundamentals-Workshop.git
 ```
 
-## Run the code
+### 4. Open the notebooks
 
-Now that you have all the required software and materials, you need to run the code. Below are steps you will take to run the code using Anaconda.
+There are **two options** for opening the workshop notebooks. You only need to use one.
 
-1. Open the Anaconda Navigator application. You should see the green snake logo appear on your screen. Note that this can take a few minutes to load up the first time.
+#### Option 1: Use Jupyter Notebook through Anaconda
 
-2. Click the "Launch" button under "Jupyter Lab" and navigate through your file system to the `Python-Fundamentals-Workshop` folder you downloaded above.
+You can run the workshop notebooks using **Jupyter Notebook**.
 
-3. Navigate to "**lessons**"
+1. Open **Anaconda Navigator**.
+2. Find **Jupyter Notebook** and click **Launch**.
+3. A browser window will open showing your files and folders.
+4. Navigate to the `Python-Fundamentals-Workshop` folder you downloaded.
+5. Open the `lessons` folder.
+6. Open `01_Jupyter_and_Python.ipynb`.
+7. Make sure the notebook is using the kernel you created, such as **Python (python-fundamentals)**.
+8. Press `Shift + Enter` to run a cell.
 
-4. Open the `01_Jupyter_and_Python.ipynb` to begin.
-
-5. Press `Shift + Enter` (or `Ctrl + Enter`) to run a cell.
-
-
-## Virtual Environments
-To create a new virtual environment, follow these steps:
-
-1. Open a terminal or command prompt.
-2. Run the following command to create a new virtual environment:
-```
-conda create --name myenv python=3.12
-```
-Replace `myenv` with the desired name for your virtual environment. Conda will create a new environment with the specified name and install a minimal set of packages.
-
-Once you have created a virtual environment, you need to activate it to start using it. Follow these steps:
-
-1. Open a terminal or command prompt.
-2. Activate the environment using the following command:
-
-For Windows:
-```
-conda activate myenv
-```
-
-For macOS and Linux:
-```
-source activate myenv
-```
-
-The name `myenv` should match the name of the environment you created in the previous step.
-
-To deactivate the virtual environment and return to the global Python environment, use the following command:
-
-For Windows:
-```
-conda deactivate
-```
-
-For macOS and Linux:
-```
-source deactivate
-```
-
-With the virtual environment activated, you can now install Python packages specific to your project. Use the conda install or pip install command to install packages, just like you would in a regular Python environment. For example:
-```
-conda install numpy
-```
-```
-pip install pandas
-```
-To ensure stability and avoid conflicts between math libraries (like MKL and OpenBLAS), it's best to install core scientific packages using a single package manager. We recommend using Conda for packages like NumPy, Pandas, SciPy, and Matplotlib.
-
-For this workshop, **install the necessary packages** by running the following command:
+You can also start Jupyter Notebook from **Anaconda Prompt** or **Terminal**:
 
 ```
-conda install numpy pandas matplotlib
+conda activate python-fundamentals
+jupyter notebook
 ```
 
-To add a virtual environment to Jupyter Notebook you will need to first install ipykernel which provides the IPython kernel for Jupyter:
+#### Option 2: Use VS Code
+
+**Visual Studio Code (VS Code)** is a popular code editor with excellent support for Python and Jupyter Notebooks.
+
+To download and install VS Code, please follow the official instructions:
+
+https://code.visualstudio.com/download
+
+To use the Conda environment you created earlier in VS Code, please review:
+
+https://code.visualstudio.com/docs/python/environments
+
+We recommend spending some time setting up and becoming familiar with VS Code, as it is widely used for Python programming and will be beneficial for your future coursework and research project.
+
+### 5. Check your setup
+
+You are ready for the workshop if all of the following work:
+
+1. In Anaconda Prompt or Terminal, activate your environment:
 
 ```
-pip install ipykernel
-```
-Next you can add your virtual environment to Jupyter by typing:
-```
-python -m ipykernel install --user --name=myenv
-```
-Again, the name `myenv` should match the name of the environment you created before.
-
-If you would like to delete/remove the virtual environment that you created before:
-```
-conda remove -n myenv --all
-```
-## VS Code
-Visual Studio Code (VS Code) is a popular code editor that provides excellent support for Python development. To download and install VS Code: https://code.visualstudio.com/download.
-
-To get started with VS Code please check out their official website: https://code.visualstudio.com/docs/getstarted/getting-started.
-
-To integrate Anaconda and Miniconda with VS Code, follow these steps:
-1. Install the “Python” extension within VS Code.
-
-- Go to the **Extensions** view by clicking on the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X`.
-
-- In the search bar, type `Python`.
-
-- Select the extension published by Microsoft and click Install.
-
-2. Select the Conda environment.
-
-- Open your project folder in VS Code.
-
-- Open the Command Palette by pressing `Ctrl+Shift+P`.
-
-- Type `Python: Select Interpreter` and press Enter.
-
-- A list of available Python interpreters will be displayed, including those from your Conda environments. Select the Conda environment you wish to use (e.g., `'my-env': conda`).
-
-You have now successfully configured VS Code to use your Conda environment.
-
-For other settings, please refer to https://code.visualstudio.com/docs/languages/python#_configuration
-
-
-
-# Python-Fundamentals-Workshop in Colab
-
-## Download the materials in this repository:
-
-* Click the green "**Code**" button in the top right of the repository information.
-* Click "**Download Zip**".
-* Extract this file to a **folder** on your computer where you can easily access it.
-
-## Upload the folder into Google Drive
-
-- Upload the **folder** into your **Google Drive** (persistent, recommended).
-- In your Google Drive, create a folder named `repos`.
-- Place the entire repository folder inside it, so that the path looks like:
-
-![](/img/MyDrive_repos.png)
-
-- The folder structure in your Drive should match the example shown in the figure. Please make sure your Drive looks the same as the screenshot, otherwise Colab may not find the files correctly.
-
-## Locate the repository in Colab
-
-- In Google Drive, double-click to open the **Python-Fundamentals-Workshop** folder, then open the **lessons** folder, and finally open **1_Jupyter_and_Python.ipynb**.
-
-- At the top of the notebook, run the following code (Colab may ask you to grant Drive access—click **Connect to Google Drive** and continue):
-
-```
-from google.colab import drive
-drive.mount('/content/drive')
-%cd /content/drive/MyDrive/repos/Python-Fundamentals-Workshop/lessons
-!ls
+conda activate python-fundamentals
 ```
 
-- You can now run all the code in Colab (the Colab environment already includes all the packages required for this workshop).
-- The figure below shows the expected output once the setup is successful:
+2. Confirm that Python is available:
 
-![](/img/drive_mount.png)
+```
+python --version
+```
 
-- For the other two `.ipynb` files, follow the same steps—you also need to run the code at the top of the notebook to ensure access to the required datasets in the repository.
+3. Open `lessons/01_Jupyter_and_Python.ipynb` in Jupyter Notebook or VS Code.
 
+4. Make sure the notebook is using your workshop environment as the kernel, such as **Python (python-fundamentals)**.
 
+5. Add a new code cell and run the following code:
 
-## Alternative option: Direct upload to Colab
+```
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
-As an alternative, you can directly upload individual notebooks, and any required data files to Colab.
+print("Setup complete!")
+```
+
+If the cell runs without errors and prints:
+
+```
+Setup complete!
+```
+
+then your environment, required packages, and Jupyter kernel are set up correctly.
